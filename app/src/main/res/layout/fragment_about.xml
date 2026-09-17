@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.AboutFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Stores and Emergency"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Google Map -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_stores"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Emergency numbers -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="6dp"
+        android:text="Emergency Calls"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="?attr/colorSurfaceVariant">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_emergency_police"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:text="Main Stores"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#111111"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_emergency_ambulance"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:text="Colombo Stores"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#111111"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_emergency_fire"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Kaluthara Stores"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#111111"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

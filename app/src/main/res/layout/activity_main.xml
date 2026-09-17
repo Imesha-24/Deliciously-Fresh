@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/md_theme_primary"
+            android:elevation="0dp"
+            app:navigationIcon="@drawable/menu"
+            app:navigationIconTint="@color/md_theme_color">
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/search_pill_bg"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/search"
+                    android:alpha="0.7"
+                    android:layout_marginStart="5dp"/>
+
+                <EditText
+                    android:id="@+id/text_input_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:hint="Search Fruits..."
+                    android:textColorHint="@color/md_theme_primary_mediumContrast"
+                    android:textColor="@color/md_theme_primary_mediumContrast"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_notification"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/notification"
+                android:background="@drawable/icon_btn_bg"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_surface"
+            app:itemIconSize="25dp"
+            app:itemTextColor="@color/nav_items_color"
+            app:itemIconTint="@color/nav_items_color"
+            app:labelVisibilityMode="labeled"
+            app:elevation="8dp"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/side_navigation_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/md_theme_surface"
+        app:headerLayout="@layout/side_nav_header"
+        app:itemIconSize="22dp"
+        app:itemBackground="@drawable/nav_item_background"
+        app:itemIconTint="@color/nav_items_color"
+        app:itemTextColor="@color/nav_items_color"
+        app:itemShapeFillColor="@color/md_theme_surfaceVariant"
+        app:menu="@menu/side_nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047105494396",
+    "project_id": "deliciously-fresh",
+    "storage_bucket": "deliciously-fresh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047105494396:android:7ff541e3807138262998f9",
+        "android_client_info": {
+          "package_name": "lk.iu.deliciously_fresh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGWvr0LtpCAxM76Wu_L21F2qdr0trJsZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

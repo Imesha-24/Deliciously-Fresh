@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.CheckoutFragment">
+
+    <TextView
+        android:id="@+id/tv_checkout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="No items to checkout"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_checkout_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_cart"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="?attr/colorSurfaceVariant">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_checkout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:minHeight="48dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_checkout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:minHeight="48dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_checkout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/tv_checkout_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LKR 0.00"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginTop="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_place_order"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Pay Now"
+            app:cornerRadius="12dp"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary" />
+    </LinearLayout>
+
+</LinearLayout>
